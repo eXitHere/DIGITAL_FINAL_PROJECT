@@ -1,1 +1,3 @@
 MODULE test
+	SUBMODULE simple
+		INSTANCE XLXI_1

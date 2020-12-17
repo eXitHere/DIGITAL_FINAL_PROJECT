@@ -1,0 +1,8 @@
+NET "Arduino_PIN[0]" LOC = P126;
+NET "Arduino_PIN[1]" LOC = P131;
+NET "Arduino_PIN[2]" LOC = P133;
+NET "Arduino_CLK" LOC = P137;
+NET "TEMP_LED[0]" LOC = P82;
+NET "TEMP_LED[1]" LOC = P81;
+NET "TEMP_LED[2]" LOC = P80;
+NET "TEMP_LED[3]" LOC = P79;

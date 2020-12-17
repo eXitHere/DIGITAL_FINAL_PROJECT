@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drawing version="7">
+    <attr value="spartan6" name="DeviceFamilyName">
+        <trait delete="all:0" />
+        <trait editname="all:0" />
+        <trait edittrait="all:0" />
+    </attr>
+    <netlist>
+        <signal name="XLXN_3(3:0)" />
+        <signal name="XLXN_4(3:0)" />
+        <signal name="OSC_20Mhz" />
+        <signal name="BTN(3:0)" />
+        <signal name="XLXN_25" />
+        <signal name="LED(2:0)" />
+        <signal name="CLK_Arduino" />
+        <signal name="COMM(3:0)" />
+        <signal name="SEG(7:0)" />
+        <signal name="PIN_B(2:0)" />
+        <port polarity="Input" name="OSC_20Mhz" />
+        <port polarity="Input" name="BTN(3:0)" />
+        <port polarity="Output" name="LED(2:0)" />
+        <port polarity="Output" name="CLK_Arduino" />
+        <port polarity="Output" name="COMM(3:0)" />
+        <port polarity="Output" name="SEG(7:0)" />
+        <port polarity="Output" name="PIN_B(2:0)" />
+        <blockdef name="Button_Controller">
+            <timestamp>2020-12-13T6:9:9</timestamp>
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
+            <rect width="64" x="368" y="20" height="24" />
+            <line x2="432" y1="32" y2="32" x1="368" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="304" x="64" y="-128" height="192" />
+        </blockdef>
+        <blockdef name="allow_one_btn">
+            <timestamp>2020-12-13T6:48:34</timestamp>
+            <rect width="256" x="64" y="-64" height="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="320" y="-44" height="24" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <blockdef name="Loading7Seg">
+            <timestamp>2020-12-14T14:29:59</timestamp>
+            <rect width="256" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="320" y="-108" height="24" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <rect width="64" x="320" y="-44" height="24" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <blockdef name="Arduino_Controller">
+            <timestamp>2020-12-14T14:53:54</timestamp>
+            <line x2="384" y1="32" y2="32" x1="320" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="320" y="-44" height="24" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+            <rect width="256" x="64" y="-64" height="128" />
+        </blockdef>
+        <blockdef name="buf">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-32" y2="-32" x1="0" />
+            <line x2="128" y1="-32" y2="-32" x1="224" />
+            <line x2="128" y1="0" y2="-32" x1="64" />
+            <line x2="64" y1="-32" y2="-64" x1="128" />
+            <line x2="64" y1="-64" y2="0" x1="64" />
+        </blockdef>
+        <block symbolname="Button_Controller" name="XLXI_9">
+            <blockpin signalname="OSC_20Mhz" name="OSC_20Mhz" />
+            <blockpin signalname="BTN(3:0)" name="_IN(3:0)" />
+            <blockpin signalname="XLXN_3(3:0)" name="_OUT(3:0)" />
+        </block>
+        <block symbolname="allow_one_btn" name="XLXI_12">
+            <blockpin signalname="XLXN_3(3:0)" name="BTN(3:0)" />
+            <blockpin signalname="XLXN_4(3:0)" name="S_Out(3:0)" />
+        </block>
+        <block symbolname="Loading7Seg" name="XLXI_25">
+            <blockpin signalname="OSC_20Mhz" name="OSC_20Mhz" />
+            <blockpin signalname="COMM(3:0)" name="COMM(3:0)" />
+            <blockpin signalname="SEG(7:0)" name="SEG(7:0)" />
+        </block>
+        <block symbolname="Arduino_Controller" name="XLXI_26">
+            <blockpin signalname="XLXN_4(3:0)" name="S_IN(3:0)" />
+            <blockpin signalname="LED(2:0)" name="B(2:0)" />
+            <blockpin signalname="CLK_Arduino" name="CLK_SEND" />
+        </block>
+        <block symbolname="buf" name="XLXI_27(2:0)">
+            <blockpin signalname="LED(2:0)" name="I" />
+            <blockpin signalname="PIN_B(2:0)" name="O" />
+        </block>
+    </netlist>
+    <sheet sheetnum="1" width="3520" height="2720">
+        <instance x="1328" y="1552" name="XLXI_9" orien="R0">
+        </instance>
+        <branch name="XLXN_3(3:0)">
+            <wire x2="1792" y1="1584" y2="1584" x1="1760" />
+        </branch>
+        <branch name="XLXN_4(3:0)">
+            <wire x2="2240" y1="1584" y2="1584" x1="2176" />
+        </branch>
+        <iomarker fontsize="28" x="864" y="1456" name="OSC_20Mhz" orien="R180" />
+        <branch name="BTN(3:0)">
+            <wire x2="1328" y1="1584" y2="1584" x1="1296" />
+        </branch>
+        <iomarker fontsize="28" x="1296" y="1584" name="BTN(3:0)" orien="R180" />
+        <instance x="944" y="1872" name="XLXI_25" orien="R0">
+        </instance>
+        <instance x="2240" y="1616" name="XLXI_26" orien="R0">
+        </instance>
+        <instance x="1792" y="1616" name="XLXI_12" orien="R0">
+        </instance>
+        <branch name="OSC_20Mhz">
+            <wire x2="944" y1="1456" y2="1456" x1="864" />
+            <wire x2="1328" y1="1456" y2="1456" x1="944" />
+            <wire x2="944" y1="1456" y2="1648" x1="944" />
+            <wire x2="944" y1="1648" y2="1776" x1="944" />
+        </branch>
+        <branch name="LED(2:0)">
+            <wire x2="2640" y1="1584" y2="1584" x1="2624" />
+            <wire x2="2736" y1="1584" y2="1584" x1="2640" />
+            <wire x2="2848" y1="1584" y2="1584" x1="2736" />
+            <wire x2="2736" y1="1360" y2="1584" x1="2736" />
+        </branch>
+        <branch name="CLK_Arduino">
+            <wire x2="2656" y1="1648" y2="1648" x1="2624" />
+        </branch>
+        <iomarker fontsize="28" x="2656" y="1648" name="CLK_Arduino" orien="R0" />
+        <branch name="COMM(3:0)">
+            <wire x2="1360" y1="1776" y2="1776" x1="1328" />
+        </branch>
+        <iomarker fontsize="28" x="1360" y="1776" name="COMM(3:0)" orien="R0" />
+        <branch name="SEG(7:0)">
+            <wire x2="1360" y1="1840" y2="1840" x1="1328" />
+        </branch>
+        <iomarker fontsize="28" x="1360" y="1840" name="SEG(7:0)" orien="R0" />
+        <iomarker fontsize="28" x="2848" y="1584" name="LED(2:0)" orien="R0" />
+        <instance x="2736" y="1392" name="XLXI_27(2:0)" orien="R0" />
+        <branch name="PIN_B(2:0)">
+            <wire x2="2992" y1="1360" y2="1360" x1="2960" />
+        </branch>
+        <iomarker fontsize="28" x="2992" y="1360" name="PIN_B(2:0)" orien="R0" />
+    </sheet>
+</drawing>

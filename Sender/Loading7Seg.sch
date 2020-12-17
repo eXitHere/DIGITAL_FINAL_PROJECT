@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<drawing version="7">
+    <attr value="spartan6" name="DeviceFamilyName">
+        <trait delete="all:0" />
+        <trait editname="all:0" />
+        <trait edittrait="all:0" />
+    </attr>
+    <netlist>
+        <signal name="OSC_20Mhz" />
+        <signal name="COMM(3:0)" />
+        <signal name="SEG(6:0)" />
+        <signal name="XLXN_21" />
+        <port polarity="Input" name="OSC_20Mhz" />
+        <port polarity="Output" name="COMM(3:0)" />
+        <port polarity="Output" name="SEG(6:0)" />
+        <blockdef name="decodeLoading">
+            <timestamp>2020-12-14T15:13:49</timestamp>
+            <rect width="256" x="64" y="-128" height="128" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="320" y="-108" height="24" />
+            <line x2="384" y1="-96" y2="-96" x1="320" />
+            <rect width="64" x="320" y="-44" height="24" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <blockdef name="CLOCK_4hz">
+            <timestamp>2020-12-13T5:56:40</timestamp>
+            <rect width="256" x="64" y="-64" height="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="384" y1="-32" y2="-32" x1="320" />
+        </blockdef>
+        <block symbolname="decodeLoading" name="XLXI_18">
+            <blockpin signalname="XLXN_21" name="C_IN" />
+            <blockpin signalname="COMM(3:0)" name="COMM(3:0)" />
+            <blockpin signalname="SEG(6:0)" name="SEG(6:0)" />
+        </block>
+        <block symbolname="CLOCK_4hz" name="XLXI_21">
+            <blockpin signalname="OSC_20Mhz" name="clock_in" />
+            <blockpin signalname="XLXN_21" name="clock_out" />
+        </block>
+    </netlist>
+    <sheet sheetnum="1" width="3520" height="2720">
+        <branch name="OSC_20Mhz">
+            <wire x2="1312" y1="1200" y2="1200" x1="1232" />
+        </branch>
+        <branch name="COMM(3:0)">
+            <wire x2="2144" y1="1200" y2="1200" x1="2112" />
+        </branch>
+        <branch name="SEG(6:0)">
+            <wire x2="2144" y1="1264" y2="1264" x1="2112" />
+        </branch>
+        <branch name="XLXN_21">
+            <wire x2="1728" y1="1200" y2="1200" x1="1696" />
+        </branch>
+        <instance x="1728" y="1296" name="XLXI_18" orien="R0">
+        </instance>
+        <instance x="1312" y="1232" name="XLXI_21" orien="R0">
+        </instance>
+        <iomarker fontsize="28" x="2144" y="1264" name="SEG(6:0)" orien="R0" />
+        <iomarker fontsize="28" x="2144" y="1200" name="COMM(3:0)" orien="R0" />
+        <iomarker fontsize="28" x="1232" y="1200" name="OSC_20Mhz" orien="R180" />
+    </sheet>
+</drawing>

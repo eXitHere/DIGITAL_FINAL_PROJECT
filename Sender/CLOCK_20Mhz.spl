@@ -1,0 +1,8 @@
+[Inputs]
+clock_in
+[Outputs]
+clock_out
+[BiDir]
+[ATTRIBUTES]
+VeriModel CLOCK_20Mhz
+
